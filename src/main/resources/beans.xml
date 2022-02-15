@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.example.demo.pojo.User">  
+        <!-- collaborators and configuration for this bean go here -->
+       <!-- below is setting value using property tag --> 
+       <!--  <property name="name" value="Raj"></property>
+         <property name="phoneNo" value="4088165002"></property>
+         <property name="address" ref="address"></property> -->
+         
+        <!-- below is setting value using constructor-arg tag --> 
+        <constructor-arg index="0" value="Rajib"></constructor-arg>
+        <constructor-arg index="1" value="4088165002"></constructor-arg>
+         
+    </bean>
+
+   <bean id="address" class="com.example.demo.pojo.Address">
+   		<property name="addr" value="usa 95126"></property>
+   		<property name="country" value="usa"></property>
+   </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
